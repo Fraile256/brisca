@@ -12,16 +12,18 @@ public class JugadorService {
     public JugadorService(JugadorRepository repositorio) {
         this.repositorio = repositorio;
     }
-    public void registrarJugador(Long jugador_id, String aliasJugador, double saldoFichas) {
-        repositorio.registrarJugador(jugador_id, aliasJugador, saldoFichas) ? false : true;
+
+    public Optional<Jugador> buscarJugadorPorAlias(String aliasJugador){
+        return repositorio.findByAliasJugador(aliasJugador);
     }
-    public boolean eliminarJugadorPorId(Long jugador_id) {
-        return repositorio.eliminarJugadorPorId(jugador_id) ? false : true;
+    public Jugador registrarJugador(Jugador jugador) {
+        return repositorio.save(jugador);
     }
-    public boolean actualizarJugador(Long jugador_id, String aliasJugador, double saldoFichas) {
-        return repositorio.actualizarJugador(jugador_id) ? false : true;
+    public void borrarJugadorPorId(Long idJugador) {
+        repositorio.deleteById(idJugador);
     }
-    public Optional<Jugador> buscarJugadorPorId(Long jugador_id) {
-        return repositorio.buscarJugadorPorId(jugador_id);
+    public void actualizarJugadorPorId(Long idJugador, Jugador jugador){
+        repositorio.actualizarById(idJugador, jugador);
     }
+
 }

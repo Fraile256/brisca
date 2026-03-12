@@ -53,5 +53,6 @@ public class JugadorController {
         } else {
             return ResponseEntity.notFound().build();
         }
+
     }
 }

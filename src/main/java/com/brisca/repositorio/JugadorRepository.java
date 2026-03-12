@@ -9,8 +9,8 @@ import java.util.Optional;
 @Repository
 public interface JugadorRepository extends JpaRepository<Jugador, Long> {
 
-    void registrarJugador(Long jugador_id, String aliasJugador, double saldoFichas);
-    boolean eliminarJugadorPorId(Long jugador_id);
-    boolean actualizarJugador(Long jugador_id);
-    Optional<Jugador> buscarJugadorPorId(Long jugador_id);
+    Jugador findByIdJugador(Long idJugador);
+    Optional<Jugador> findByAliasJugador(String aliasJugador);
+    void actualizarById(Long idJugador, Jugador jugador);
+    void deleteJugadorById(Long idJugador);
 }
