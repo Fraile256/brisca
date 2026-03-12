@@ -16,5 +16,15 @@ public class ManoJugada {
     private Long Id;
     private int ordenTurno;
     private boolean fueManoGanadora;
+    @ManyToOne()
+    @JoinColumn(name = "carta_id")
+    private Carta id_carta;
+    @ManyToOne()
+    @JoinColumn(name = "jugador_id")
+    private Jugador id_jugador;
+    @ManyToOne()
+    @JoinColumn(name = "partida_id")
+    private PartidaHistorico id_partida;
+
 
 }
