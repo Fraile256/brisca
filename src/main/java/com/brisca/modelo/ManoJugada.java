@@ -20,7 +20,7 @@ public class ManoJugada {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private int ordenTurno;
-    private boolean fueManoGanadora;
+    private boolean manoGanadora;
     @ManyToOne()
     @JoinColumn(name = "carta_id")
     private Carta id_carta;
