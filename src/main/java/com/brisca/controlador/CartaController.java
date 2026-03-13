@@ -12,6 +12,9 @@ import java.util.Optional;
 @RequestMapping("/api/cartas")
 public class CartaController {
     private CartaRepository repositorio;
+    public CartaController(CartaRepository repositorio) {
+        this.repositorio = repositorio;
+    }
     @GetMapping
     public List<Carta> findAllCartas() {
         return repositorio.findAll();
