@@ -66,6 +66,6 @@ classDiagram
 ```powershell
 docker-compose up -d --build
 ```
-## Autor
-
+[localhost:8087/api/cartas](http://localhost:8087/api/cartas)
+## Autor:
 Alejandro Fraile del Olmo — Curso IFCD0014
