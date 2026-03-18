@@ -49,15 +49,22 @@ classDiagram
     Carta "1" -- "N" ManoJugada : se juega en
 ```
 ## API Endpoints
-
-| Metodo | URL                   | Descripcion |
-|--------|-----------------------|-------------|
-| GET | `/api/jugadores`      | Listar todos |
-| GET | `/api/jugadores/{id}` | Obtener por ID |
-| POST | `/api/jugadores`      | Crear nuevo |
-| PUT | `/api/jugadores/{id}` | Actualizar |
-| DELETE | `/api/jugadores/{id}` | Eliminar |
-
+### Jugadores
+| Metodo | URL                   | Descripcion                |
+|--------|-----------------------|----------------------------|
+| GET | `/api/jugadores`      | Listar todos los jugadores |
+| GET | `/api/jugadores/{id}` | Obtener jugadores por ID   |
+| POST | `/api/jugadores`      | Crear nuevo jugador        |
+| PUT | `/api/jugadores/{id}` | Actualizar jugadores       |
+| DELETE | `/api/jugadores/{id}` | Eliminar jugadores         |
+### Cartas
+| Metodo | URL          | Descripcion                |
+|--------|--------------|----------------------------|
+| GET | `/api/cartas` | Listar todos los jugadores |
+| GET | `/api/cartas/{id}` | Obtener jugadores por ID   |
+| POST | `/api/cartas` | Crear nuevo jugador        |
+| PUT | `/api/cartas/{id}` | Actualizar jugadores       |
+| DELETE | `/api/cartas/{id}` | Eliminar jugadores         |
 ## Screenshot Swagger
 
 ![swagger](MiSwagger.png)
@@ -66,6 +73,7 @@ classDiagram
 ```powershell
 docker-compose up -d --build
 ```
-[localhost:8087/api/cartas](http://localhost:8087/api/cartas)
+La url de la API es:
+[http://localhost:8087/api/cartas](http://localhost:8087/api/cartas)
 ## Autor:
 Alejandro Fraile del Olmo — Curso IFCD0014
