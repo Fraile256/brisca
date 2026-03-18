@@ -1,8 +1,7 @@
 # Brisca
-
 ![CI/CD](https://github.com/Fraile256/brisca/actions/workflows/build.yml/badge.svg)
 
-Descripcion breve de una linea: que hace la aplicacion y para quien.
+Aplicación dockerizada de un juego de cartas hecha con Spring, Hibernate y MAVEN. 
 
 ## Tecnologias
 
@@ -11,7 +10,7 @@ Descripcion breve de una linea: que hace la aplicacion y para quien.
 | Java | 17 | Lenguaje principal |
 | Spring Boot | 4.0.x | Framework backend |
 | JPA/Hibernate | 6.x | Persistencia (ORM) |
-| PostgreSQL | 16 | Base de datos (Docker) |
+| PostgreSQL | 42.7.10 | Base de datos (Docker) |
 | H2 | - | Base de datos (desarrollo) |
 | Docker | - | Contenedorizacion |
 | GitHub Actions | - | CI/CD |
@@ -19,8 +18,36 @@ Descripcion breve de una linea: que hace la aplicacion y para quien.
 
 ## Arquitectura
 
-(Aqui va un diagrama Mermaid con las capas: Controller > Service > Repository > BD)
+```mermaid
+classDiagram
+    direction RL
+    class PartidaHistorico {
+        +Long Id
+        +LocalDateTime fechaHoraInicio
+        +String tipoJuego
+        +double boteApostado
+    }
+    class ManoJugada {
+        +Long Id
+        +int ordenTurno
+        +boolean manoGanadora
+    }
+    class Jugador {
+        +Long Id
+        +String aliasJugador
+        +double saldoFichas
+    }
+    class Carta {
+        +Long id
+        +Long numeroValido
+        +PaloBaraja palo
+        +double puntosValorJuego
+    }
 
+    PartidaHistorico "1" -- "N" ManoJugada : contiene
+    Jugador "1" -- "N" ManoJugada : realiza
+    Carta "1" -- "N" ManoJugada : se juega en
+```
 ## API Endpoints
 
 | Metodo | URL                   | Descripcion |
