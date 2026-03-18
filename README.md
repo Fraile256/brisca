@@ -1,6 +1,6 @@
-# Brisca
+# Nombre del Proyecto
 
-![CI/CD](https://github.com/Fraile256/brisca/actions/workflows/build.yml/badge.svg)
+![CI/CD](https://github.com//SU-REPO/actions/workflows/build.yml/badge.svg)
 
 Descripcion breve de una linea: que hace la aplicacion y para quien.
 
