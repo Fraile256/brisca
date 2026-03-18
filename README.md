@@ -1,20 +1,20 @@
 # Brisca
 ![CI/CD](https://github.com/Fraile256/brisca/actions/workflows/build.yml/badge.svg)
 
-Aplicación dockerizada de un juego de cartas hecha con Spring, Hibernate y MAVEN. 
+Aplicación API REST dockerizada de un juego de cartas llamado brisca hecha con Spring, Hibernate y MAVEN. 
 
 ## Tecnologias
 
 | Tecnologia | Version | Uso |
 |------------|---------|-----|
-| Java | 17 | Lenguaje principal |
-| Spring Boot | 4.0.x | Framework backend |
-| JPA/Hibernate | 6.x | Persistencia (ORM) |
+| Java | 21      | Lenguaje principal |
+| Spring Boot | 4.0.3   | Framework backend |
+| JPA/Hibernate | -       | Persistencia (ORM) |
 | PostgreSQL | 42.7.10 | Base de datos (Docker) |
-| H2 | - | Base de datos (desarrollo) |
-| Docker | - | Contenedorizacion |
-| GitHub Actions | - | CI/CD |
-| Swagger/OpenAPI | - | Documentacion API |
+| H2 | -       | Base de datos (desarrollo) |
+| Docker | 29.2.1  | Contenedorizacion |
+| GitHub Actions | -       | CI/CD |
+| Swagger/OpenAPI | 2.8.6   | Documentacion API |
 
 ## Arquitectura
 
@@ -63,6 +63,13 @@ classDiagram
 | GET | `/api/cartas` | Listar todos las cartas |
 | GET | `/api/cartas/{id}` | Obtener cartas por ID  |
 | POST | `/api/cartas` | Crear nueva carta      |
+### PARTIDAS_HISTORICO
+| Metodo | URL                 | Descripcion                          |
+|--------|---------------------|--------------------------------------|
+| GET | `/api/partidas_historico` | Listar el historico de partidas      |
+| GET | `/api/partidas_historico/{id}`        | Obtener el historico partidas por ID |
+| POST | `/api/partidas_historico`       | Crear un nuevo historico partidas    |
+
 ## Screenshot Swagger
 
 ![swagger](MiSwagger.png)
