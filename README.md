@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# Brisca
 
-![CI/CD](https://github.com//SU-REPO/actions/workflows/build.yml/badge.svg)
+![CI/CD](https://github.com/Fraile256/brisca/actions/workflows/build.yml/badge.svg)
 
 Descripcion breve de una linea: que hace la aplicacion y para quien.
 
@@ -23,32 +23,22 @@ Descripcion breve de una linea: que hace la aplicacion y para quien.
 
 ## API Endpoints
 
-| Metodo | URL | Descripcion |
-|--------|-----|-------------|
-| GET | `/api/recurso` | Listar todos |
-| GET | `/api/recurso/{id}` | Obtener por ID |
-| POST | `/api/recurso` | Crear nuevo |
-| PUT | `/api/recurso/{id}` | Actualizar |
-| DELETE | `/api/recurso/{id}` | Eliminar |
+| Metodo | URL                   | Descripcion |
+|--------|-----------------------|-------------|
+| GET | `/api/jugadores`      | Listar todos |
+| GET | `/api/jugadores/{id}` | Obtener por ID |
+| POST | `/api/jugadores`      | Crear nuevo |
+| PUT | `/api/jugadores/{id}` | Actualizar |
+| DELETE | `/api/jugadores/{id}` | Eliminar |
 
 ## Screenshot Swagger
 
-(Aqui va la imagen capturada con GoFullPage)
+![swagger](MiSwagger.png)
 
 ## Como ejecutar
-
-### Opcion 1: Docker Compose (recomendado)
-
-(Instrucciones con docker compose up)
-
-### Opcion 2: Desde Docker Hub (sin clonar)
-
-(Instrucciones con docker pull + docker run)
-
-### Opcion 3: Desde IntelliJ (desarrollo)
-
-(Instrucciones con IntelliJ)
-
+```powershell
+docker-compose up -d --build
+```
 ## Autor
 
-Nombre — Curso IFCD0014
+Alejandro Fraile del Olmo — Curso IFCD0014
