@@ -58,13 +58,11 @@ classDiagram
 | PUT | `/api/jugadores/{id}` | Actualizar jugadores       |
 | DELETE | `/api/jugadores/{id}` | Eliminar jugadores         |
 ### Cartas
-| Metodo | URL          | Descripcion                |
-|--------|--------------|----------------------------|
-| GET | `/api/cartas` | Listar todos los jugadores |
-| GET | `/api/cartas/{id}` | Obtener jugadores por ID   |
-| POST | `/api/cartas` | Crear nuevo jugador        |
-| PUT | `/api/cartas/{id}` | Actualizar jugadores       |
-| DELETE | `/api/cartas/{id}` | Eliminar jugadores         |
+| Metodo | URL          | Descripcion            |
+|--------|--------------|------------------------|
+| GET | `/api/cartas` | Listar todos las cartas |
+| GET | `/api/cartas/{id}` | Obtener cartas por ID  |
+| POST | `/api/cartas` | Crear nueva carta      |
 ## Screenshot Swagger
 
 ![swagger](MiSwagger.png)
